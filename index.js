@@ -29,7 +29,7 @@ async function main() {
     quickplay,
   } = stats;
 
-  const currentReportFileData = JSON.stringify(currentReportObject);
+  const currentReportFileData = JSON.stringify(currentReportObject, undefined, '  ');
 
   // Build the file name
   const currentReportDate = new Date().toISOString();
