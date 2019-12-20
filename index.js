@@ -9,6 +9,7 @@ const OLD_FILE_SUFFIX = 'old';
 const REPORTS_FOLDER = 'reports';
 const USERNAME = 'ColdMeson#1635';
 const REPORT_FILE_EXTENSION = 'json';
+const JSON_SPACING = '  ';
 
 const STATUS = {
   INIT: 1,
@@ -29,7 +30,7 @@ async function main() {
     quickplay,
   } = stats;
 
-  const currentReportFileData = JSON.stringify(currentReportObject, undefined, '  ');
+  const currentReportFileData = JSON.stringify(currentReportObject, undefined, JSON_SPACING);
 
   // Build the file name
   const currentReportDate = new Date().toISOString();

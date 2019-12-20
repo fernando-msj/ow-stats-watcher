@@ -11,6 +11,9 @@ const FIVE_MINUTES = MINUTE * 5;
 const run = async () => {
 	while (true) {
 		console.log(child_process.execSync('./run.sh').toString());
+		await sleep(10);
+
+		console.log(child_process.execSync('./compress.sh').toString())
 		await sleep(FIVE_MINUTES);
 	}
 };
